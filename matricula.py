@@ -1,4 +1,4 @@
-matricula_int = "31gg-xa"
+matricula_int = "31ggxa"
 matricula_med = ""
 matricula_final = ""
 valido = True
@@ -28,14 +28,13 @@ else:
       valido = False
       break
 
-#Passar para formato de matricula
-for i in range(len(matricula_med)):
-  if i in [2, 4]:
-    matricula_final += "-"
-  matricula_final += matricula_med[i]
 
-#Output se for válido
+#Formato matricula e output se for válido
 if valido:
+  for i in range(len(matricula_med)):
+    if i in [2, 4]:
+      matricula_final += "-"
+    matricula_final += matricula_med[i]
   print(matricula_final)
 else:
   print("A matricula introduzida é inválida!")
