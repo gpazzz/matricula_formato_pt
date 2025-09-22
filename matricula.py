@@ -17,10 +17,7 @@ else:
   for i in range(0,len(matricula_med),2):
     bloco = matricula_med[i:i+2]
 
-    if len(bloco) < 2:
-      valido = False
-      break
-    elif bloco[0].isalpha() and bloco[1].isalpha():
+    if bloco[0].isalpha() and bloco[1].isalpha():
       pass
     elif bloco[0].isdigit() and bloco[1].isdigit():
       pass
