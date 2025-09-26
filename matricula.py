@@ -1,7 +1,9 @@
-matricula_int = "31ggxa"
+matricula_int = input("Introduza a matricula do veiculo: ")
 matricula_med = ""
 matricula_final = ""
 valido = True
+count_alfa = 0
+count_digi = 0
 
 #Passar a matricula introduzida para apenas letras maiuculas e numeros
 for i in range(len(matricula_int)):
@@ -18,13 +20,15 @@ else:
     bloco = matricula_med[i:i+2]
 
     if bloco.isalpha():
-      pass
+      count_alfa += 1
     elif bloco.isdigit():
-      pass
+      count_digi += 1
     else:
       valido = False
       break
 
+  if count_alfa == 0 or count_digi == 0:
+    valido = False
 
 #Formato matricula e output se for válido
 if valido:
